@@ -1,0 +1,194 @@
+:root {
+  /* Primary */
+  --Purple_600: hsl(246, 80%, 60%);
+  --Orange_300: hsl(15, 100%, 70%);
+  --Blue_300: hsl(195, 74%, 62%);
+  --Pink_400: hsl(348, 100%, 68%);
+  --Green_400: hsl(145, 58%, 55%);
+  --Purple_700: hsl(264, 64%, 52%);
+  --Yellow_300: hsl(43, 84%, 65%);
+
+  /* Neutral */
+  --Navy_950: hsl(226, 43%, 10%);
+  --Navy_900: hsl(235, 46%, 20%);
+  --Purple_500: hsl(235, 45%, 61%);
+  --Navy_200: hsl(236, 100%, 87%);
+
+  --font: "Rubik", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--Navy_950);
+}
+
+/* Layout */
+.container {
+  display: flex;
+  gap: 1.8rem;
+  max-width: 1110px;
+  width: 90%;
+  align-items: stretch;
+}
+
+/* Left Section */
+.left-section {
+  width: 255px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--Navy_900);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.user-detail {
+  background-color: var(--Purple_600);
+  border-radius: 1rem;
+  padding: 2.2rem 2rem;
+  flex-basis: 68%;
+}
+
+.user-detail img {
+  height: 5rem;
+  border: 3px solid white;
+  border-radius: 50%;
+  margin-bottom: 2.5rem;
+}
+
+.user-name {
+  font-weight: 300;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-top: 0.3rem;
+}
+
+.user-detail p {
+  font-size: 0.95rem;
+  color: var(--Navy_200);
+}
+
+.duration {
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  justify-content: center;
+  flex-basis: 32%;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  color: var(--Navy_200);
+  font-size: 1.1rem;
+  font-family: inherit;
+  display: flex;
+  justify-content: flex-start;
+  transition: color 0.2s ease;
+}
+
+button:hover,
+button.active {
+  color: white;
+  cursor: pointer;
+}
+
+/* Right Section Grid */
+.right-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+  flex-grow: 1;
+}
+
+/* Activity Cards */
+.activity {
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding-top: 2.8rem;
+  position: relative;
+}
+
+/* Card Background Colors */
+.work {
+  background-color: var(--Orange_300);
+}
+.play {
+  background-color: var(--Blue_300);
+}
+.study {
+  background-color: var(--Pink_400);
+}
+.exercise {
+  background-color: var(--Green_400);
+}
+.social {
+  background-color: var(--Purple_700);
+}
+.self-care {
+  background-color: var(--Yellow_300);
+}
+
+/* Icons */
+.activity-header {
+  position: absolute;
+  top: -10px;
+  right: 15px;
+  z-index: 0;
+}
+
+/* Dark Card Content Layer */
+.activity-main {
+  background-color: var(--Navy_900);
+  border-radius: 1rem;
+  padding: 1.8rem;
+  z-index: 1;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.activity-main:hover {
+  background-color: var(--Purple_500);
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.ellipsis {
+  cursor: pointer;
+}
+
+.card-bottom .task-duration {
+  font-size: 3.5rem;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+}
+
+.card-bottom .last-task {
+  color: var(--Navy_200);
+  font-size: 0.95rem;
+}
