@@ -28,4 +28,4 @@ dailyBtn.addEventListener("click", () => render("daily"));
 weeklyBtn.addEventListener("click", () => render("weekly"));
 monthlyBtn.addEventListener("click", () => render("monthly"));
 
-render("daily"); // default on load
+render("daily");

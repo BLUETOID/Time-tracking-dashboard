@@ -192,3 +192,65 @@ button.active {
   color: var(--Navy_200);
   font-size: 0.95rem;
 }
+
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    width: 100%;
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .left-section {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .user-detail {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
+  }
+
+  .user-detail img {
+    height: 4rem;
+    margin-bottom: 0;
+  }
+
+  .user-name {
+    font-size: 1.5rem;
+    br {
+      display: none;
+    }
+  }
+
+  .duration {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.5rem 1.5rem;
+  }
+
+  .right-section {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+  }
+
+  .card-bottom .task-duration {
+    font-size: 2rem;
+    margin-bottom: 0;
+  }
+
+  .card-bottom .last-task {
+    font-size: 0.9rem;
+  }
+}
